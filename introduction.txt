@@ -1,0 +1,24 @@
+- Mongodb is database, NoSQL database, Very flexible
+
+- structure 
+	Database -> Collection -> document
+	inside document we use JSON Data Format (javascript object), Keys and Values pairs.
+
+- MongoDB is Schemaless, multiple document in same collection can have different structure
+
+- systemctl start mongod [ To start mongodb server ]
+
+- mongo [ will give you mongo shell ]
+
+Basic command -
+	1. show dbs [ To see all existing database ]
+	2. use telegram [ To switch telegram database if exist else will create telegram database and switch to it ]
+	3. show collections [ To see existing collections ]
+	4. db.collection_name.find() [ get all documents from collection_name ]
+	5. db.collection_name.insertOne({"name": "akshay"})
+	6. db.collection_name.insertMany([ {"name": "krish", "age": 26}], {"name": "Amar", "age": 27})
+	7. db.collection_name.find().count()  [ to get total number of documents in collection_name ]
+	8. db.collection_name.find({"age": 26}) [ to get all docs which has age equal to 26 ]
+	9. db.collection_name.find({"age": {gte: 26}}) [ to get all docs which has age greater than equal to 26 ]
+	10. db.collection_name.find().limit(1) [ will follow find query and on matched result return 1 doc from as mentioned limit as 1 ]
+
